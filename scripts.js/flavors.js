@@ -1,6 +1,6 @@
 import { getFlavors, setFlavors  } from "./database.js"
 
-const sizes = getFlavors ()
+const flavors = getFlavors ()
 
 document.addEventListener(
     "change",
