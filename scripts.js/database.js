@@ -19,7 +19,7 @@ const database = {
         { id: 3, type: "Beer and Bar Nuts", price: 3 },
         { id: 4, type: "Cereal Milk", price: 6 } 
     ],
-    size: [
+    sizes: [
         { id: 1, type: "a", price: 1 },
         { id: 2, type: "b", price: 1 },
         { id: 3, type: "c", price: 1 },
