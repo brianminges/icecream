@@ -19,17 +19,17 @@ const database = {
         { id: 3, type: "Beer and Bar Nuts", price: 3 },
         { id: 4, type: "Cereal Milk", price: 6 } 
     ],
-    sizes: [
+    size: [
         { id: 1, type: "a", price: 1 },
         { id: 2, type: "b", price: 1 },
         { id: 3, type: "c", price: 1 },
         { id: 4, type: "d", price: 1 } 
     ],
     toppings: [
-        { id: 1, type: "e", price: 1 },
-        { id: 2, type: "f", price: 1 },
-        { id: 3, type: "g", price: 1 },
-        { id: 4, type: "h", price: 1 } 
+        { id: 1, name: "sprinkles", price: .50},
+        { id: 2, name: "nuts", price: .75},
+        { id: 3, name: "shell", price: .50},
+        { id: 4, name: "candy", price: .50}
     ],
     customOrders: [
         {
@@ -43,56 +43,22 @@ const database = {
 
 }
 
-// export const getMetals = () => {
-//     return database.metals.map(metal => ({...metal}))
-// }
-
-export const getFlavors = () => {
-    return database.flavors.map(flavor => ({...flavor}))
-}
-
-// export const getStyles = () => {
-//     return database.styles.map(style => ({...style}))
-// }
-
-// export const getOrders = () => {
-//     return database.customOrders.map(order => ({...order}))
-// }
-
-// export const getCurentOrder = () => {
-//     return database.orderBuilder.id =id
-// }
-
-export const setFlavors = (id) => {
-    database.orderBuilder.flavorId = id
-}
-
-// export const setSize = (id) => {
-//     database.orderBuilder.sizeId = id
-// }
-
-// export const setStyle = (id) => {
-//     database.orderBuilder.styleId = id
-// }
 
 
-export const addCustomOrder = () => {
-    // Copy the current state of user choices
-    const newOrder = {...database.orderBuilder}
 
-    // Add a new primary key to the object
-    const lastIndex = database.customOrders.length - 1
-    newOrder.id = database.customOrders[lastIndex].id + 1
+    export const getToppings = () => {
+        return database.toppings.map(topping => ({...topping}))
+    }
 
-    // Add a timestamp to the order
-    newOrder.timestamp = Date.now()
+    export const getCones = () => {
+        return database.cones.map(cone => ({...cone}))
+    }
 
-    // Add the new order object to custom orders state
-    database.customOrders.push(newOrder)
+    export const setToppings = (id) => {
+    database.orderBuilder.toppingId = id
+    }
 
-    // Reset the temporary state for user choices
-    database.orderBuilder = {}
+    export const setCones = (id) => {
+    database.orderBuilder.conesId = id
+    }
 
-    // Broadcast a notification that permanent state has changed
-    document.dispatchEvent(new CustomEvent("stateChanged"))
-}
