@@ -53,9 +53,17 @@ const database = {
 
 
     export const getToppings = () => {
-    return database.toppings.map(topping => ({...topping}))
+        return database.toppings.map(topping => ({...topping}))
+    }
+
+    export const getCones = () => {
+        return database.cones.map(cone => ({...cone}))
     }
 
     export const setToppings = (id) => {
     database.orderBuilder.toppingId = id
+    }
+
+    export const setCones = (id) => {
+    database.orderBuilder.conesId = id
     }
