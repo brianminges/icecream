@@ -5,11 +5,40 @@
 
 */
 const database = {
+    orderBuilder: {},
+
     cones: [
         { id: 1, type: "kiddie", price: 1 },
         { id: 2, type: "cake", price: 2 },
         { id: 3, type: "waffle", price: 3 },
         { id: 4, type: "chocolate-dipped waffle", price: 5 } 
+    ],
+    flavors: [
+        { id: 1, type: "Bacon and Olive", price: 2 },
+        { id: 2, type: "Ghost Pepper", price: 4 },
+        { id: 3, type: "Beer and Bar Nuts", price: 3 },
+        { id: 4, type: "Cereal Milk", price: 6 } 
+    ],
+    size: [
+        { id: 1, type: "a", price: 1 },
+        { id: 2, type: "b", price: 1 },
+        { id: 3, type: "c", price: 1 },
+        { id: 4, type: "d", price: 1 } 
+    ],
+    toppings: [
+        { id: 1, type: "e", price: 1 },
+        { id: 2, type: "f", price: 1 },
+        { id: 3, type: "g", price: 1 },
+        { id: 4, type: "h", price: 1 } 
+    ],
+    customOrders: [
+        {
+            id: 1,
+            conesId: 3,
+            sizeId: 2,
+            toppingsId: 3,
+            timestamp: 1614659931693
+        }
     ]
 
 }
