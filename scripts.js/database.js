@@ -26,10 +26,10 @@ const database = {
         { id: 4, type: "d", price: 1 } 
     ],
     toppings: [
-        { id: 1, type: "e", price: 1 },
-        { id: 2, type: "f", price: 1 },
-        { id: 3, type: "g", price: 1 },
-        { id: 4, type: "h", price: 1 } 
+        { id: 1, name: "sprinkles", price: .50},
+        { id: 2, name: "nuts", price: .75},
+        { id: 3, name: "shell", price: .50},
+        { id: 4, name: "candy", price: .50}
     ],
     customOrders: [
         {
@@ -43,12 +43,6 @@ const database = {
 
 }
 
-    toppings: [
-        { id: 1, name: "sprinkles", price: .50},
-        { id: 2, name: "nuts", price: .75},
-        { id: 3, name: "shell", price: .50},
-        { id: 4, name: "candy", price: .50}
-    ]
 
 
 
